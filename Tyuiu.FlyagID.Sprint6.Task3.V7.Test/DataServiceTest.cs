@@ -10,7 +10,17 @@ namespace Tyuiu.FlyagID.Sprint6.Task3.V7.Test
         public void ValidSortByFourthColumn()
         {
             DataService ds = new DataService();
-            int[,] result = ds.Calculate(null);
+
+            int[,] matrix =
+            {
+                { 31, 25, -18, 12,   9 },
+                {  6, 34,  -2,  2, -18 },
+                { -5,  4,  27,  4,  -1 },
+                {  4, 15,  34, -6, -10 },
+                {  0,  8,   5, 14, -17 }
+            };
+
+            int[,] result = ds.Calculate(matrix);
 
             Assert.AreEqual(-6, result[0, 3]);
             Assert.AreEqual(2, result[1, 3]);
