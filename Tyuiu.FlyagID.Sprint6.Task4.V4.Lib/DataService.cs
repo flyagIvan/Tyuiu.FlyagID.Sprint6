@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System;
 using tyuiu.cources.programming.interfaces.Sprint6;
 
 namespace Tyuiu.FlyagID.Sprint6.Task4.V4.Lib
@@ -16,19 +17,26 @@ namespace Tyuiu.FlyagID.Sprint6.Task4.V4.Lib
                 int x = startValue + i;
                 double fx;
 
-                double cos = Math.Cos(x);
-                if (Math.Abs(cos) < 1e-10)
+                double cosX = Math.Cos(x);
+
+                if (Math.Abs(cosX) < 1e-10)
+                {
                     fx = 0;
+                }
                 else
-                    fx = ((2 * x + 6) / cos + x) - 3;
+                {
+                    fx = ((2 * x + 6) / cosX) + x - 3;
+                }
 
                 result[i] = Math.Round(fx, 2);
             }
 
             return result;
         }
+    
 
-        public void SaveToFile(double[] values, string path)
+
+public void SaveToFile(double[] values, string path)
         {
             using StreamWriter sw = new StreamWriter(path);
             foreach (double v in values)
