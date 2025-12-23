@@ -18,7 +18,7 @@ namespace Tyuiu.FlyagID.Sprint6.Task6.V14.Lib
                 System.StringSplitOptions.RemoveEmptyEntries);
 
             var result = words
-                .Where(w => w.ToLower().Contains('z'));
+                .Where(w => w.Contains('z')); 
 
             return string.Join(" ", result);
         }
