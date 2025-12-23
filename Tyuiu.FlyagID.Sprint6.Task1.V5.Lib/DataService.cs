@@ -15,13 +15,18 @@ namespace Tyuiu.FlyagID.Sprint6.Task1.V5.Lib
                 double x = startValue + i;
 
                 double denominator = 2;
+
                 if (Math.Abs(denominator) < 1e-10)
                 {
                     result[i] = 0;
                 }
                 else
                 {
-                    double y = Math.Sin(x) + Math.Cos(2 * x) / denominator;
+                    double y =
+                        Math.Sin(x) +
+                        (Math.Cos(2 * x) / denominator) -
+                        1.5 * x;
+
                     result[i] = Math.Round(y, 2);
                 }
             }

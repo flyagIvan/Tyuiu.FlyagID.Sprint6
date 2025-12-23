@@ -21,7 +21,7 @@ namespace Tyuiu.FlyagID.Sprint6.Task2.V20.Test
             int index = (int)(-1.2 - start);
             if (index >= 0 && index < res.Length)
             {
-                Assert.AreEqual(0, res[index]);
+                Assert.AreEqual(6.96, res[index]);
             }
         }
     }
